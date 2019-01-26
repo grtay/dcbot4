@@ -195,7 +195,7 @@ client.on('ready', () => {
 .setAuthor(`Bot Aktif!`)
 .setDescription(`Bot Başlatıldı! `)
 .setFooter(``)
-client.channels.get("537698445545439240").send(girisembed)
+client.channels.get("538547367167918093").send(girisembed)
 });
 
 
