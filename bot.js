@@ -82,7 +82,18 @@ client.unload = command => {
   });
 };
 
-////////////////////////////
+///////////////////////////
+client.on('ready', () => {
+    const girisembed = new Discord.RichEmbed()
+.setColor("RANDOM")
+.setAuthor(`Bot Aktif!`)
+.setDescription(`Bot Başlatıldı! `)
+.setFooter(``)
+client.channels.get("565905401128812584").send(girisembed)
+});
+
+
+////////////////
 client.on("guildMemberAdd", member => {
 
 	var channel = member.guild.channels.find("name", "🤖geri-bildirim");
@@ -98,26 +109,11 @@ client.on("guildMemberAdd", member => {
 
 client.on('guildMemberRemove',member=>{
   var channel = member.guild.channels.find("id", "565905314528886814");
-  if (!channel) return channel.send('#🤖geri-bildirim Bulamıyorum ??');
-  channel.send('Beyler, '+member+' Aramızdan Ayrıldı ????)
+  if (!channel) return channel.send('#🤖geri-bildirim Bulamıyorum :confused:');
+  channel.send('Beyler, '+member+' Aramızdan Ayrıldı :runner:)
 });
 
-
-
-
-
-///////////////////////////
-client.on('ready', () => {
-    const girisembed = new Discord.RichEmbed()
-.setColor("RANDOM")
-.setAuthor(`Bot Aktif!`)
-.setDescription(`Bot Ba?latıldı! `)
-.setFooter(``)
-client.channels.get("565905401128812584").send(girisembed)
-});
-
-
-////////////////
+/////////////////
 client.elevation = message => {
   if(!message.guild) {
 	return; }
