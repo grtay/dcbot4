@@ -85,7 +85,7 @@ client.unload = command => {
 ////////////////////////////
 client.on("guildMemberAdd", member => {
 
-	var channel = member.guild.channels.find("name", "??geri-bildirim");
+	var channel = member.guild.channels.find("name", "🤖geri-bildirim");
 	if (!channel) return;
 
   var role = member.guild.roles.find("name", "KAYIT BEKLiYOR");
@@ -98,7 +98,7 @@ client.on("guildMemberAdd", member => {
 
 client.on('guildMemberRemove',member=>{
   var channel = member.guild.channels.find("id", "565905314528886814");
-  if (!channel) return channel.send('#??geri-bildirim Bulamıyorum ??');
+  if (!channel) return channel.send('#🤖geri-bildirim Bulamıyorum ??');
   channel.send('Beyler, '+member+' Aramızdan Ayrıldı ????)
 });
 
